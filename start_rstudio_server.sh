@@ -24,6 +24,6 @@ echo $CONDA_PREFIX > $CONDA_ENV_PATH
 /usr/lib/rstudio-server/bin/rserver --server-daemonize=0 \
   --www-port $1 \
   --secure-cookie-key-file $COOKIE_KEY_PATH \
-  --rsession-which-r=$(which R) \
-  --rsession-ld-library-path=$CONDA_PREFIX/lib \
-  --rsession-path="$CWD/rsession.sh"
+  --rsession-which-r $(which R) \
+  --rsession-ld-library-path $CONDA_PREFIX/lib \
+  --rsession-path $CWD/rsession.sh
